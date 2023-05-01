@@ -1,9 +1,9 @@
 package com.example.medicine.controller.restapi;
 
-import application.controller.restapi.input.RequestMedicineRecordDto;
-import application.controller.restapi.mapper.MedicineRecordDtoMapper;
-import application.controller.restapi.output.ResponseMedicineRecordDto;
-import application.service.MedicineManagerService;
+import com.example.medicine.controller.restapi.input.RequestMedicineRecordDto;
+import com.example.medicine.controller.restapi.mapper.MedicineRecordDtoMapper;
+import com.example.medicine.controller.restapi.output.ResponseMedicineRecordDto;
+import com.example.medicine.service.MedicineManagerService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

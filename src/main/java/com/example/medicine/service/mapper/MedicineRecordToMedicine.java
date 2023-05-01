@@ -1,10 +1,11 @@
 package com.example.medicine.service.mapper;
 
-import application.dependencies.medicineDb.output.MedicineRecord;
+import com.example.medicine.dependencies.medicineDb.output.MedicineRecord;
+import com.example.medicine.service.output.Medicine;
 
 public class MedicineRecordToMedicine {
-    public static application.service.output.Medicine from (MedicineRecord medicineRecord) {
-        return application.service.output.Medicine.builder()
+    public static Medicine from (MedicineRecord medicineRecord) {
+        return Medicine.builder()
                 .name(medicineRecord.getName())
                 .manufacturer(medicineRecord.getManufacturer())
                 .dateOfManufacture(medicineRecord.getDateOfManufacture())

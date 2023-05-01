@@ -1,7 +1,7 @@
 package com.example.medicine.service.mapper;
 
-import application.dependencies.medicineDb.output.MedicineRecord;
-import application.service.output.Medicine;
+import com.example.medicine.dependencies.medicineDb.output.MedicineRecord;
+import com.example.medicine.service.output.Medicine;
 
 public class MedicineToMedicineRecord {
     public static MedicineRecord from(Medicine medicine) {

@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class ResponseMedicineRecordDto {
     private Long id;
     private String name;
-    private String manufarturer;
+    private String manufacturer;
     private LocalDate dateOfManufacture;
     private LocalDate expiryDate;
     private boolean verificationStatus;

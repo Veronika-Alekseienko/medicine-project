@@ -1,9 +1,8 @@
 package com.example.medicine.controller.restapi.mapper;
 
-import application.controller.restapi.input.RequestMedicineRecordDto;
-import application.controller.restapi.output.ResponseMedicineRecordDto;
-import application.dependencies.medicineDb.output.MedicineRecord;
-import application.service.output.Medicine;
+import com.example.medicine.controller.restapi.input.RequestMedicineRecordDto;
+import com.example.medicine.controller.restapi.output.ResponseMedicineRecordDto;
+import com.example.medicine.service.output.Medicine;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,7 +11,7 @@ public class MedicineRecordDtoMapper {
         ResponseMedicineRecordDto responseDto = new ResponseMedicineRecordDto();
         responseDto.setId(medicine.getId());
         responseDto.setName(medicine.getName());
-        responseDto.setManufarturer(medicine.getManufacturer());
+        responseDto.setManufacturer(medicine.getManufacturer());
         responseDto.setDateOfManufacture(medicine.getDateOfManufacture());
         responseDto.setExpiryDate(medicine.getExpiryDate());
         return responseDto;

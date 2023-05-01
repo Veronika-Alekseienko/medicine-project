@@ -1,6 +1,6 @@
 package com.example.medicine.service;
 
-import application.service.output.Medicine;
+import com.example.medicine.service.output.Medicine;
 
 public interface MedicineManagerService {
     Medicine save(Medicine medicineRecord);
