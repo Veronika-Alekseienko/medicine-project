@@ -1,6 +1,7 @@
 package com.example.medicine;
 
 import com.example.medicine.controller.restapi.MedicineRecordController;
+import com.example.medicine.controller.restapi.input.RequestMedicineRecordDto;
 import com.example.medicine.controller.restapi.mapper.MedicineRecordDtoMapper;
 import com.example.medicine.controller.restapi.output.ResponseMedicineRecordDto;
 import com.example.medicine.service.MedicineManagerService;
@@ -8,7 +9,9 @@ import com.example.medicine.service.output.Medicine;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -64,5 +67,16 @@ public class MedicineRecordControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(mapToJson(medicine)))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void whenMedicineIsNull() throws Exception {
+        String uri = "/records";
+        Medicine medicine = null;
+
+        mvc.perform(MockMvcRequestBuilders.post(uri)
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(mapToJson(medicine)))
+                .andExpect(status().isBadRequest());
     }
 }
